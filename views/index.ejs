@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Bookipedia</h1>
+        <form action="/submit" method="POST">
+            <input class="myInput" type="text" placeholder="Information about book" name="book">
+            <p><button type="submit">Find</button></p> 
+        </form>
+            <% if (locals.content) { %>
+                <% for (let i = 0; i < content.length; i++) { %>
+                    <div class="card">
+                        <% if (content[i].volumeInfo.imageLinks && content[i].volumeInfo.imageLinks.thumbnail && content[i].volumeInfo.description ) { %>
+                        <br>
+                        <br>
+                        <h3> <%= content[i].volumeInfo.title %></h3>
+                        <img src="<%= content[i].volumeInfo.imageLinks.thumbnail %>" alt="poster">
+                        <p> <%= content[i].volumeInfo.description %></p>
+                        <p> <%= content[i].volumeInfo.authors %> </p>
+                        <p> <%= content[i].volumeInfo.publishedDate %> </p>   
+                        <% }; %>     
+                    </div>
+                    <br>
+                    <br>
+                <% } %>
+            <% } else { %>    
+                <p> Waiting for a search... </p>
+            <% } %>
+    </div>
+</body>
+</html>

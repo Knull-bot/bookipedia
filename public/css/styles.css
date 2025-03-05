@@ -1,0 +1,51 @@
+body {
+    background-color: #211C84;
+    color: #B5A8D5;
+}
+
+h1, p, h3 {
+    font-family: "Cormorant", serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h3 {
+    font-weight: 800;
+}
+
+
+.container {
+    margin: 13rem auto;
+    width: 50%;
+    text-align: center;
+}
+
+button {
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    width: 10%;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+
+.myInput {
+    width:80%;
+    height: 2rem;
+    border: 2px solid #4D55CC;
+    border-radius: 5px;
+}
+
+.card {
+    text-align: center;
+    color: #B5A8D5;
+}
